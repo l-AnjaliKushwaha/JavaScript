@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dom</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+            <ul class="laguages">
+                        <li>JavaScript</li>
+            </ul>
+            
+</body>
+<script>
+            function addLanguages (langName){
+                        const li = document.createElement('li');
+                        li.innerHTML = `${langName}`
+            document.querySelector('.laguages').appendChild(li)
+            }
+
+            addLanguages("Python")
+            addLanguages("TypeScript")
+         
+
+            function addOptiLanguages (langNmae){
+                        const li = document.createElement('li');
+                        li.appendChild(document.createTextNode(langNmae))
+                        document.querySelector('.laguages').appendChild(li)
+            }
+
+            addOptiLanguages("Java")
+            addOptiLanguages("C++")
+            addOptiLanguages("Ruby")
+
+
+            // EDIT
+
+            const secondLang = document.querySelector('li:nth-child(2)')
+            // secondLang.innerHTML = "Mojo"
+
+            const newLi = document.createElement('li')
+            newLi.textContent = "Mojo"
+            secondLang.replaceWith(newLi)
+
+            // EDIT
+
+            const firstLang = document.querySelector('li:first-child')
+            firstLang.outerHTML = ' <li>SQL</li>'
+
+            // REMOVE
+
+            const lastLang = document.querySelector('li:last-child')
+            lastLang.remove()
+</script>
+</html>

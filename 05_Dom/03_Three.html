@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dom</title>
+</head>
+<body style="background-color: #212121;  color: #ffff;">
+            
+</body>
+<script>
+            const div = document.createElement('div')
+            console.log(div);
+            div.className = "main"
+            // div.id = "myId"
+            div.id = Math.round(Math.random() * 10 + 1)
+            div.setAttribute('title', 'genetared title')
+            div.style.backgroundColor = "green"
+            div.style.color = "white"
+            div.style.padding = "15px"
+            div.style.borderRadius = "15px"
+            // div.innerHTML = "hello world"
+            const text = document.createTextNode("Hellow world")
+            div.appendChild(text)
+            document.body.append(div)
+            
+</script>
+</html>
