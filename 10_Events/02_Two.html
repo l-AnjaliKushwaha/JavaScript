@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Events</title>
+</head>
+<body style="background-color: #212121;">
+            <h1 style="color: aliceblue;">Hello World!</h1>
+            <button id="stop"> Stop </button>
+            
+</body>
+<script>
+            const sayAnjali = function(){
+                        console.log("I am anjali");
+            }
+            const changeText = function(){
+                        document.querySelector('h1').innerHTML = "Best of luck!"
+            }
+
+            const changeMe = setTimeout(changeText, 2000)
+
+            document.querySelector('#stop').addEventListener('click', function() {
+                        clearTimeout(changeMe)
+                        console.log("Stopped");
+            })
+
+</script>
+</html>
